@@ -28,8 +28,8 @@ interface
 
 uses
   {$IFDEF FPC} LCLIntf, LMessages, {$IFDEF MSWindows} Windows, {$ENDIF} {$ELSE}
-  Windows, {$ENDIF} Classes, Controls, Messages, Graphics, SysUtils, XMLIntf,
-  XMLDoc, AggBasics, AggColor, AggWin32Bmp, AggPlatformSupport, AggPixelFormat,
+  Windows, {$ENDIF} Classes, Controls, Messages, Graphics, SysUtils, //XMLIntf, XMLDoc,
+  AggBasics, AggColor, AggWin32Bmp, AggPlatformSupport, AggPixelFormat,
   AggPixelFormatRgba, AggRenderScanLines, AggRendererBase, AggRenderingBuffer,
   AggRasterizerScanLineAA, AggRendererScanLine, AggScanLinePacked,
   AggControl, AggSliderControl, AggCheckBoxControl, AggRadioBoxControl,
@@ -301,8 +301,8 @@ type
     procedure CMColorChanged(var Message: TLMessage); message CM_COLORCHANGED;
 {$ELSE}
     procedure CMColorChanged(var Message: TMessage); message CM_COLORCHANGED;
-    procedure CalculateTransform;
 {$ENDIF}
+    procedure CalculateTransform;
   protected
     procedure PaintBuffer; override;
     procedure AngleChanged; virtual;

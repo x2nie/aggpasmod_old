@@ -30,7 +30,7 @@ interface
 uses
   SysUtils,
   Expat,
-  AnsiStrings,
+  //AnsiStrings,
   AggBasics,
   AggColor,
   AggSvgPathTokenizer,
